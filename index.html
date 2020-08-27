@@ -248,8 +248,8 @@
                     }
                 })
             })
-        function getLyrics(a){
-            fetch(`https://api.lyrics.ovh/v1/${a}`)
+        function getLyrics(lastPart){
+            fetch(`https://api.lyrics.ovh/v1/${lastPart}`)
             .then(res => res.json())
             .then(lyric => {
                     document.getElementById('full-lyrics').innerText = lyric.lyrics;
